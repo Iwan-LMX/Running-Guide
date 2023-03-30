@@ -1,6 +1,8 @@
 <?php
-namespace Core;
+namespace SQLSetting\Core;
 //基础模型
+use function Core\array_search;
+
 class Model{
     protected $mypdo;
     private $table;//表名

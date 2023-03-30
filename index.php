@@ -13,7 +13,6 @@
 
     <div class="cell-2">
         <?php
-            use \Core\Model;
 
         ?>
         <!--概要当前身体数据-->

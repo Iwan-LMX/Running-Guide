@@ -1,32 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>首页</title>
-    <!--调用css-->
-    <link rel="stylesheet" type="text/css" href="./cssStore/myCss.css" media="screen"/>
-</head>
-<body>
-<div class='fatherContainer'>
-    <!--导航栏-->
-    <?php include("./IncludesHTML/header.html"); ?>
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+define('ROOT', dirname(__FILE__));
+define("APP_NAME",'App');
+define("APP_PATH",ROOT."/".APP_NAME."/");
+require_once 'Core/core.php';
 
-    <div class="cell-2">
-        <?php
-
-        ?>
-        <!--概要当前身体数据-->
-
-        <!--指数分析图-->
-
-        <!--资讯投送区-->
-
-        <!--今日计划摘要-->
-
-    </div>
-    <!--Footer-->
-    <?php include("./IncludesHTML/footer.html"); ?>
-</div>
-
-</body>
-</html>
+?>

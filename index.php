@@ -9,18 +9,14 @@
 <body>
 <div class='fatherContainer'>
     <!--导航栏-->
-    <?php include("./IncludesHTML/header.html"); ?>
+    <?php
+
+    include("./IncludesHTML/header.html"); ?>
 
     <div class="cell-2">
-        <?php
-            use \Core\Model;
-
-        ?>
         <!--概要当前身体数据-->
 
-        <!--指数分析图-->
-
-        <!--资讯投送区-->
+        <!--跑力折线图-->
 
         <!--今日计划摘要-->
 

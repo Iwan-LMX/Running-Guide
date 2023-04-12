@@ -1,5 +1,4 @@
 <?php
-require_once "classStore/dataCenter/Getquotient.php";
 require_once "classStore/dataCenter/SaveRunning.php";
 class FileUploader {
     // 定义类的属性
@@ -41,10 +40,11 @@ class FileUploader {
                     $jsonStr = file_get_contents($targetFile);
                     // 将.json字符串转换为关联数组
                     $jsonArr = json_decode($jsonStr, true);
-                    // 打印关联数组的内容
-                    echo "<pre>";
-                    print_r($jsonArr["running_data"]);
-                    echo "</pre>";
+                    // 清洗数据
+                    $saverun = new SaveRunning($jsonArr["running_data"]);
+                    // 存储跑步数据并计算跑力值
+                    $saverun->Saveruns();
+
                 } else {
                     echo "错误：文件上传失败。";
                 }

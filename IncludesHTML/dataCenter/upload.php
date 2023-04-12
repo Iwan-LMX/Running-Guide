@@ -4,6 +4,7 @@
     <input type="file" name="file" id="file"><br>
     <input type="submit" name="submit" value="上传">
 </form>
+<label for="massage"></label>
 </body>
 <?php
 

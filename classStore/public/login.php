@@ -14,8 +14,11 @@ $result = mysqli_query($connID,$sql);
 $num = mysqli_num_rows($result);//函数返回结果集中行的数量
 //判断是否登录后显示或跳转
 if($num){
-    setcookie("Username", $username, time()+3600);
-    setcookie("Password", $password, time()+3600);
+    $data = $result->fetch_all();
+    session_start();
+    $_SESSION['UserID'] = $data[0][0];
+    $_SESSION['Username'] = $username;
+    $_SESSION['Password'] = $password;
     echo '<script>alert("登录成功");location.href="../../index.php";</script>;';
 }else{
     echo "<script>alert('用户名或密码错误');window.history.back();</script>";die;

@@ -9,17 +9,15 @@
 <body>
 <div class='fatherContainer'>
     <!--导航栏-->
-    <?php
-
-    include("./IncludesHTML/header.html"); ?>
-
+    <?php include("./IncludesHTML/header.html"); ?>
     <div class="cell-2">
         <!--概要当前身体数据-->
+            <? require 'classStore/index/generalData.php'?>
 
         <!--跑力折线图-->
-
+            <? require 'classStore/index/quotientGraph.php'?>
         <!--今日计划摘要-->
-
+            <? require 'classStore/index/dailyExercise.php'?>
     </div>
     <!--Footer-->
     <?php include("./IncludesHTML/footer.html"); ?>

@@ -12,13 +12,11 @@
     <?php include("./IncludesHTML/header.html"); ?>
 
     <div class="cell-2">
-        <!--概要当前身体数据-->
+        <!--上传的运动数据文件-->
+        <?php include('./IncludesHTML/dataCenter/upload.php');?>
 
-        <!--当前选中数据图节点的详细数据内容-->
+        <!--列表展示数据图节点的详细数据内容-->
 
-        <!--选择手动导出的的运动数据文件-->
-
-        <!--目前支持同步的运动软件类型API接口-->
 
     </div>
     <!--Footer-->

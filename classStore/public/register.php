@@ -25,8 +25,11 @@ if($username == "" || $password == "")
     }
     else
     {
-        setcookie("Username", $username, time()+3600);
-        setcookie("Password", $password, time()+3600);
+        $data = $result->fetch_all();
+        session_start();
+        $_SESSION['UserID'] = $data[0][0];
+        $_SESSION['Username'] = $username;
+        $_SESSION['Password'] = $password;
         echo '<script>alert("注册成功!");location.href="../../index.php";</script>;';
     }
 }

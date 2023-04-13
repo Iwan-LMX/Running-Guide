@@ -26,7 +26,7 @@
             error_reporting(E_ERROR); //关闭warning
             if($_SESSION["Username"]){
                 $exercise = new showExer($_SESSION["Username"]);
-                if( $exercise->exercise_id || $exercise->expire){
+                if( !$exercise->exercise_id || $exercise->expire){
                     $disable="";
                 }
             }

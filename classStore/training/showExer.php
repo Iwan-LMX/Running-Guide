@@ -16,8 +16,10 @@
                     //验证是否已经过期
                     $sql = "SELECT * FROM `exercises` WHERE `exercise_id` ={$this->exercise_id}";
                     $result = mysqli_query($connID,$sql);
-                    $this->expire = $result->fetch_all();
-                    $this->expire = $this->expire[0][3];
+                    $end = $result->fetch_all();
+                    $end = strtotime($end[0][3]);
+                    if (time()>$end) $this->expire = true;
+                    else $this->expire = false;
                 }
             }else{
                 return null;

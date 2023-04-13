@@ -11,40 +11,46 @@
     margin:0;
     font-family: Arial;
     padding: 10px;
-    background: #f1f1f1;
+    /*background: #f1f1f1;*/
 }
 /*设置容器, 将container设为100%, body固定在前, footer固定在最底部*/
 #fatherContainer {
     display: grid;
     width: 100%;
     min-height: 100%;
-    background-color: #eee;
-    grid-template-rows: auto 1fr auto;
-    row-gap: 10px;
+    /*background-color: #eee;*/
+    grid-template-columns: auto 1fr auto; /*竖轴*/
+    grid-template-rows: auto 1fr auto; /*横轴*/
+    /*row-gap: 10px;*/
 }
 
 #fatherContainer > .cell-1 {
+    /*导航栏*/
     grid-area: header;
     grid-row: 1/2;
-    color: #00fa00;
+    grid-column: 1/4;
 }
 
 #fatherContainer > .cell-2 {
+    /*主内容*/
     grid-area: content;
     grid-row: 2/3;
-    color: black;
+    grid-column: 1/4;
 }
 
 #fatherContainer > .cell-3 {
+    /*页脚*/
     grid-area: footer;
-    grid-row: 3/span 4;
-    color: wheat;
+    grid-row: 3/4;
+    grid-column: 2/3;
 }
 footer {
     display: block;
     background: #000000;
     color: #c900d4;
     padding: 15px;
+    border-radius: 20px;
+    margin: 20px auto;
     text-align: center;
     block-size: fit-content;
 }
@@ -68,7 +74,7 @@ footer {
 
 #nav > ul > li > a {
     text-align: center;
-    line-height: 72px;
+    line-height: 50px;
     font-size: 20px;
     color: black;
 }
@@ -80,7 +86,7 @@ footer {
 
 ul > span {
     float: left;
-    line-height: 72px;
+    line-height: 50px;
     color: rgb(225, 224, 224);
     font-weight: 800;
     font-size: 24px;

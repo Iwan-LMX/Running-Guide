@@ -5,13 +5,23 @@
     <title>上传数据</title>
     <!--调用css-->
     <link rel="stylesheet" type="text/css" href="./cssStore/myCss.css" media="screen"/>
+    <style>
+        .child-grid{
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            background-color: aquamarine;
+            grid-template-columns:  1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    </style>
 </head>
 <body>
-<div class='fatherContainer'>
+<div id='fatherContainer'>
     <!--导航栏-->
     <?php include("./IncludesHTML/header.html"); ?>
 
-    <div class="cell-2">
+    <div class="cell-2 child-grid">
         <!--上传的运动数据文件-->
         <?php include('./IncludesHTML/dataCenter/upload.php');?>
 

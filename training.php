@@ -5,18 +5,26 @@
     <title>挑选训练计划</title>
     <!--调用css-->
     <link rel="stylesheet" type="text/css" href="./cssStore/myCss.css" media="screen"/>
+    <style>
+        .child-grid{
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            background-color: aquamarine;
+            grid-template-columns:  1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    </style>
 </head>
 <body>
-<div class='fatherContainer'>
+<div id='fatherContainer'>
     <!--导航栏-->
     <?php include("./IncludesHTML/header.html"); ?>
 
-    <div class="cell-2">
+    <div class="cell-2 child-grid">
         <!--再划分容器左右为主框架-->
         <!--日历视图查看训练计划-->
-        <?php
 
-        ?>
         <!--AI生成计划-->
         <?php
             require_once "classStore/training/showExer.php";

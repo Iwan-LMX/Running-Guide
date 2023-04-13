@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./cssStore/myCss.css" media="screen"/>
 </head>
 <body>
-<div class='fatherContainer'>
+<div id='fatherContainer'>
     <!--导航栏-->
     <?php include("./IncludesHTML/header.html"); ?>
 

@@ -21,12 +21,16 @@
         <?php
             require_once "classStore/training/showExer.php";
             require_once "classStore/training/aiTrains.php";
-            $exercise_id = new showExer();
-            $disable = "\"disabled\"";
-            if($exercise_id){
-                $disable="\"\"";
+            session_start();
+            $disable = "disabled";
+            error_reporting(E_ERROR); //关闭warning
+            if($_SESSION["Username"]){
+                $exercise = new showExer($_SESSION["Username"]);
+                if( $exercise->exercise_id || $exercise->expire){
+                    $disable="";
+                }
             }
-            echo '<form action="" method="post"> <button disable = '.$disable.' value="true" name="create">AI生成训练计划</button> </form>';
+            echo '<form action="" method="post"> <button '.$disable.' value="true" name="create">AI生成训练计划</button> </form>';
             if(isset($_POST["create"])){
                 //选中创建计划, startdate是通过日历视图获取的
                 $startdate = $end = date('Y-m-d', time());

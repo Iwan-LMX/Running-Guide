@@ -29,4 +29,16 @@ class Getquotient{
 
         return $this->ability_id;
     }
+    public function weekquotients($userid){
+        require "Config/database.php";
+        //获取quotient表内已最后一条数据的id
+        $sql = "SELECT * FROM quotient WHERE user_id = {$userid} ORDER BY `date` DESC LIMIT 7";
+        $result = mysqli_query($connID,$sql);
+        $num = mysqli_num_rows($result);//函数返回结果集中行的数量
+        if($num){
+            return $result->fetch_all();
+        }else{
+            return null;
+        }
+    }
 }

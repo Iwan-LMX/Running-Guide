@@ -13,16 +13,28 @@
 
     <div class="cell-2">
         <!--再划分容器左右为主框架-->
+        <!--日历视图查看训练计划-->
+        <?php
 
-        <!--选择栏   (运动类型 -> 力量训练 有氧运动)-->
+        ?>
+        <!--AI生成计划-->
+        <?php
+            require_once "classStore/training/showExer.php";
+            require_once "classStore/training/aiTrains.php";
+            $exercise_id = new showExer();
+            $disable = "\"disabled\"";
+            if($exercise_id){
+                $disable="\"\"";
+            }
+            echo '<form action="" method="post"> <button disable = '.$disable.' value="true" name="create">AI生成训练计划</button> </form>';
+            if(isset($_POST["create"])){
+                //选中创建计划, startdate是通过日历视图获取的
+                $startdate = $end = date('Y-m-d', time());
+                $aiCreate = new aiTrains($startdate,"publicFile/UserExe");
+            }
+        ?>
+        <!--训练详细描述-->
 
-        <!--运动动作指导视频-->
-
-        <!--当前运动的详细包含内容 label-->
-
-        <!--订阅此计划-->
-
-        <!--选择 开始&结束日期-->
 
     </div>
     <!--Footer-->

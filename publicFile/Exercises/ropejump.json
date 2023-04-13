@@ -1,0 +1,75 @@
+{
+  "exercise": {
+    "name": "跳绳",
+    "describe": "跳绳是一种简单而有效的有氧运动，可以提高心肺功能、协调性和耐力。",
+    "video url": "https://www.youtube.com/watch?v=9bZkp7q19f0"
+  },
+  "rank": [
+    {
+      "rank": 0,
+      "work": 50,
+      "break": 10,
+      "round": 5
+    },
+    {
+      "rank": 1,
+      "work": 55,
+      "break": 10,
+      "round": 5
+    },
+    {
+      "rank": 2,
+      "work": 60,
+      "break": 10,
+      "round": 5
+    },
+    {
+      "rank": 3,
+      "work": 65,
+      "break": 10,
+      "round": 6
+    },
+    {
+      "rank": 4,
+      "work": 70,
+      "break": 10,
+      "round": 6
+    },
+    {
+      "rank": 5,
+      "work": 75,
+      "break": 10,
+      "round": 7
+    },
+    {
+      "rank": 6,
+      "work": 80,
+      "break": 10,
+      "round": 7
+    },
+    {
+      "rank": 7,
+      "work": 85,
+      "break": 10,
+      "round": 6
+    },
+    {
+      "rank": 8,
+      "work": 90,
+      "break": 10,
+      "round": 6
+    },
+    {
+      "rank": 9,
+      "work": 95,
+      "break": 10,
+      "round": 6
+    },
+    {
+      "rank": 10,
+      "work": 100,
+      "break": 10,
+      "round": 6
+    }
+  ]
+}

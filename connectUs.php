@@ -9,7 +9,7 @@
 <body>
 <div id='fatherContainer'>
     <!--导航栏-->
-    <?php include("./IncludesHTML/header.html"); ?>
+    <?php include("./Includes/header.html"); ?>
 
     <div class="cell-2">
         <!--label问题类型 select box选择栏 -->
@@ -20,7 +20,7 @@
 
     </div>
     <!--Footer-->
-    <?php include("./IncludesHTML/footer.html"); ?>
+    <?php include("./Includes/footer.html"); ?>
 </div>
 
 </body>

@@ -10,7 +10,7 @@
 <body>
 <div id='fatherContainer'>
     <!--导航栏-->
-    <?php include("./IncludesHTML/header.html"); ?>
+    <?php include("./Includes/header.html"); ?>
 
     <div class="cell-2">
         <!--显示blog大致内容 3 x 3范围-->
@@ -23,7 +23,7 @@
 
     </div>
     <!--Footer-->
-    <?php include("./IncludesHTML/footer.html"); ?>
+    <?php include("./Includes/footer.html"); ?>
 </div>
 
 </body>

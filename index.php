@@ -24,6 +24,8 @@
             grid-area: data;
             grid-row: 2/3;
             grid-column: 1/2;
+            justify-self: right;
+            align-self: center;
         }
         .child-grid > .item3{
             grid-area: exercise;

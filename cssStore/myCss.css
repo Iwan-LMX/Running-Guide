@@ -70,6 +70,7 @@ footer {
     width: 175.75px;
     height: 72px;
     text-align: center;
+    list-style-type: none;
 }
 
 #nav > ul > li > a {
@@ -77,6 +78,7 @@ footer {
     line-height: 50px;
     font-size: 20px;
     color: black;
+    text-decoration: none;
 }
 
 #nav > ul > li > a:hover {

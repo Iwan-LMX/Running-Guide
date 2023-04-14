@@ -34,29 +34,34 @@
     }
 </style>
 <?php
-    require_once "Config/database.php";
+    require_once "classStore/training/showExer.php";
     session_start();
-
+    $username = "????";
+    if($_SESSION["Username"]){
+        $username = $_SESSION["Username"];
+        $exercise = new showExer($_SESSION["Username"]);
+    }
 ?>
 <table class=table11_7>
+    <tr><th colspan="2">信息简要</th></tr>
     <tr>
         <td>用户名</td>
-        <td>root</td>
+        <td><?php echo $username;?></td>
     </tr>
     <tr>
         <td>当前能力等级</td>
-        <td>Level: 5</td>
+        <td>Level: <?php echo $exercise->rank;?></td>
     </tr>
     <tr>
         <td>最新跑力值</td>
-        <td><?php echo $_COOKIE["quotient"]?></td>
+        <td><?php echo $_COOKIE["quotient"];?></td>
     </tr>
     <tr>
         <td>最近一次跑步时间</td>
-        <td><?php echo $_COOKIE["date"]?></td>
+        <td><?php echo $_COOKIE["date"];?></td>
     </tr>
     <tr>
         <td>本周跑步次数</td>
-        <td><?php echo $_COOKIE["works"]?></td>
+        <td><?php echo $_COOKIE["works"];?></td>
     </tr>
 </table>

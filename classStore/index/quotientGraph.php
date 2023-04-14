@@ -16,7 +16,7 @@
             $quotients[6-$i] =  $data[$i][3];
             //计算本周跑步次数
             $diff = date_diff(date_create($data[$i][2]), date_create());
-                if($diff->d < 7){
+                if($diff->days < 7){
                     $works++;
                 }
         }

@@ -34,7 +34,7 @@
                 $exercise_id = $data[0][0];
                 $exercise_id++;
                 //写sql语句 并 插入exercises表中
-                $sql = "INSERT INTO exercises (`exercise_id`, `filename`, `start`, `end`, `times`) VALUES ($exercise_id, '{$this->filename}',  '{$start}', '{$end}', $rank)";
+                $sql = "INSERT INTO exercises (`exercise_id`, `filename`, `start`, `end`, `rank`) VALUES ($exercise_id, '{$this->filename}',  '{$start}', '{$end}', $rank)";
                 mysqli_query($connID,$sql);
                 //将当前exercise_id和user表关联起来
                 $sql = "UPDATE `user` SET `exercise_id` = $exercise_id WHERE `user`.`user_id` = {$_SESSION["UserID"]}";

@@ -24,6 +24,7 @@
             grid-area: data;
             grid-row: 2/3;
             grid-column: 1/2;
+            padding-right: 20px;
             justify-self: right;
             align-self: center;
         }
@@ -31,6 +32,9 @@
             grid-area: exercise;
             grid-row: 2/3;
             grid-column: 2/3;
+            padding-left: 20px;
+            justify-self: left;
+            align-self: center;
         }
     </style>
     <!--引入Echarts可视库-->

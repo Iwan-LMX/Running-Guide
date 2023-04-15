@@ -1,13 +1,20 @@
+<?php
+    session_start();
+    $disable = "disabled";
+    error_reporting(E_ERROR); //关闭warning
+    if($_SESSION["UserID"]){
+        $disable = "";
+    }
+?>
 <body>
 <form action="" method="post" enctype="multipart/form-data">
     <label for="file">选择文件：</label>
     <input type="file" name="file" id="file"><br>
-    <input type="submit" name="submit" value="上传">
+    <input type="submit" name="submit" <?php echo $disable?> value="上传">
 </form>
 <label for="massage"></label>
 </body>
 <?php
-
 // 引入PHP文件
 require_once "classStore/dataCenter/FileUploader.php";
 // 判断是否有文件上传
@@ -18,3 +25,4 @@ if (isset($_FILES["file"])) {
     $fileUploader->uploadFile($_FILES["file"]);
 
 }
+?>

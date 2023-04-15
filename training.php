@@ -11,7 +11,6 @@
             align-content: center;
             justify-content: center;
             height: 650px;
-            background-color: aquamarine;
             grid-template-columns:  repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
         }
@@ -19,12 +18,15 @@
             grid-area: calendar;
             grid-row: 1/3;
             grid-column: 1/2;
+            align-self: center;
+            justify-self: center;
         }
         .child-grid > .item2{
             grid-area: button;
             grid-row: 3/4;
             grid-column: 1/2;
-            padding-right: 20px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .child-grid > .item3{
             grid-area: describe1;
@@ -38,10 +40,9 @@
         }
     </style>
     <!--引入JavaScript-->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="cssStore/jquery-ui.css">
+    <script src="Includes/js/jquery-3.6.0.js"></script>
+    <script src="Includes/js/jquery-ui.js"></script>
 </head>
 <body>
 <div id='fatherContainer'>

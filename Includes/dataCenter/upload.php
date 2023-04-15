@@ -9,8 +9,8 @@
 <body>
 <form action="" method="post" enctype="multipart/form-data">
     <label for="file">选择文件：</label>
-    <input type="file" name="file" id="file"><br>
-    <input type="submit" name="submit" <?php echo $disable?> value="上传">
+    <input type="file" name="file" id="file" class="my-button"><br>
+    <input type="submit" name="submit" <?php echo $disable?> value="上传" class="my-button">
 </form>
 <label for="massage"></label>
 </body>

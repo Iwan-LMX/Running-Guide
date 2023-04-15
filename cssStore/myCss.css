@@ -104,3 +104,20 @@ ul > span {
 #nav > ul > li > .a2 {
     color: rgb(101, 198, 58);
 }
+button{
+    background-color:#f66f6a;
+    color:white;
+    width: 400px;
+    height: 45px;
+    border:0;
+    font-size: 16px;
+    box-sizing: content-box;
+    border-radius: 5px;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: #a54b4a;
+}
+button:disabled{
+    background-color: rgba(246, 111, 106, 0.44);
+}

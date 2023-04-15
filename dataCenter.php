@@ -22,20 +22,20 @@
             grid-template-rows: 2fr 3fr;
         }
         .child-grid > .item1{
-            grid-area: graph;
+            grid-area: button;
             grid-row: 1/2;
             grid-column: 1/2;
             justify-self: center;
             align-self: center;
         }
         .child-grid > .item2{
-            grid-area: data;
+            grid-area: table;
             grid-row: 1/3;
             grid-column: 2/3;
             padding-right: 20px;
         }
         .child-grid > .item3{
-            grid-area: exercise;
+            grid-area: logo;
             grid-row: 2/3;
             grid-column: 1/2;
             padding-left: 20px;
@@ -71,7 +71,7 @@
 
         <!--展示支持的运动类型和图标-->
         <div class="item3">
-            <h3 style="text-align: center">本应用支持应用和文件类型</h3>
+            <h3 style="text-align: center">本系统支持应用和文件类型</h3>
             <div class="box" style="background-image: url(/Includes/image/huawei_logo.webp);"></div>
             <div class="box" style="background-image: url(/Includes/image/json_logo.png);"></div>
         </div>

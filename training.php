@@ -12,10 +12,36 @@
             justify-content: center;
             height: 650px;
             background-color: aquamarine;
-            grid-template-columns:  1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns:  repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .child-grid > .item1{
+            grid-area: calendar;
+            grid-row: 1/3;
+            grid-column: 1/2;
+        }
+        .child-grid > .item2{
+            grid-area: button;
+            grid-row: 3/4;
+            grid-column: 1/2;
+            padding-right: 20px;
+        }
+        .child-grid > .item3{
+            grid-area: describe1;
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        .child-grid > .item4{
+            grid-area: describe2;
+            grid-row: 2/4;
+            grid-column: 2/3;
         }
     </style>
+    <!--引入JavaScript-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 </head>
 <body>
 <div id='fatherContainer'>
@@ -25,14 +51,19 @@
     <div class="cell-2 child-grid">
         <!--再划分容器左右为主框架-->
         <!--日历视图查看训练计划-->
+        <div class="item1" id="datepicker"></div>
+        <?php
+            require_once "classStore/training/calendar.php";
+        ?>
 
         <!--AI生成计划-->
+        <div class="item2">
         <?php
             require_once "classStore/training/showExer.php";
             require_once "classStore/training/aiTrains.php";
+            error_reporting(E_ERROR); //关闭warning
             session_start();
             $disable = "disabled";
-            error_reporting(E_ERROR); //关闭warning
             if($_SESSION["Username"]){
                 $exercise = new showExer($_SESSION["Username"]);
                 if( !$exercise->exercise_id || $exercise->expire){
@@ -46,8 +77,14 @@
                 $aiCreate = new aiTrains($startdate,"publicFile/UserExe");
             }
         ?>
+        </div>
         <!--训练详细描述-->
+        <div class="item3">
 
+        </div>
+        <div class="item4">
+
+        </div>
 
     </div>
     <!--Footer-->

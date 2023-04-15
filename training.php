@@ -30,13 +30,12 @@
         }
         .child-grid > .item3{
             grid-area: describe1;
-            grid-row: 1/2;
+            grid-row: 1/4;
             grid-column: 2/3;
-        }
-        .child-grid > .item4{
-            grid-area: describe2;
-            grid-row: 2/4;
-            grid-column: 2/3;
+            height: 100%;
+            width: 100%;
+            align-self: center;
+            justify-self: center;
         }
     </style>
     <!--引入JavaScript-->
@@ -74,19 +73,15 @@
             echo '<form action="" method="post"> <button '.$disable.' value="true" name="create">AI生成训练计划</button> </form>';
             if(isset($_POST["create"])){
                 //选中创建计划, startdate是通过日历视图获取的
-                $startdate = $end = date('Y-m-d', time());
+                $startdate = $_GET["date"];
                 $aiCreate = new aiTrains($startdate,"publicFile/UserExe");
             }
         ?>
         </div>
         <!--训练详细描述-->
         <div class="item3">
-
+            <?php require_once "classStore/training/showDetails.php"?>
         </div>
-        <div class="item4">
-
-        </div>
-
     </div>
     <!--Footer-->
     <?php include("./Includes/footer.html"); ?>

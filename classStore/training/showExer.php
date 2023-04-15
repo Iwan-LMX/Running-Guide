@@ -3,6 +3,8 @@
         private $exercise_id;
         private $expire;//是否失效 true 为是, false为否
         private $rank; //最近一次锻炼的跑步能力等级
+        private $start;
+        private $end;
         public function __construct($username){
             //获取user目前对应的exercise_id并验证是否过期
             require "Config/database.php";
@@ -21,8 +23,10 @@
                     $end = strtotime($data[0][3]);
                     if (time()>$end) $this->expire = true;
                     else $this->expire = false;
-                    //保存用户当前运动能力水平
+                    //保存用户当前运动能力水平&&当前运动的起至日期
                     $this->rank = $data[0][4];
+                    $this->end = $data[0][3];
+                    $this->start = $data[0][2];
                 }
             }else{
                 return null;

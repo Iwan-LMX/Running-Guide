@@ -5,7 +5,7 @@
         border:0;
     }
     .table11_3 th {
-        background-color:#FF5675;
+        background-color:#00A5FF;
         color:#FFFFFF
     }
     .table11_3,.table11_3 th,.table11_3 td {
@@ -16,7 +16,7 @@
         border-collapse:collapse;
     }
     .table11_3 th,.table11_3 td {
-        border: 1px solid #fe2047;
+        border: 1px solid #2083fe;
         border-width:1px 0 1px 0;
         border:2px inset #ffffff;
     }
@@ -24,13 +24,13 @@
         border: 1px solid #ffffff;
     }
     .table11_3 tr:nth-child(odd){
-        background-color:#fec6d1;
+        background-color:#aae1fe;
     }
     .table11_3 tr:nth-child(even){
         background-color:#ffffff;
     }
     .table11_3 tr:nth-child(4){
-        background-color:#fec6d1;
+        background-color:#aae1fe;
     }
     .table11_3 tr:nth-child(5){
         background-color:#ffffff;

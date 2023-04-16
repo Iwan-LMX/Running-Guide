@@ -39,6 +39,7 @@
     $username = "????";
     if($_SESSION["Username"]){
         $username = $_SESSION["Username"];
+        //获得用户数据
         $exercise = new showExer($_SESSION["Username"]);
     }
 ?>

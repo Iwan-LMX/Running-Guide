@@ -25,7 +25,8 @@ if($username == "" || $password == "")
     }
     else
     {
-        $data = $result->fetch_all();
+        $sql="SELECT * FROM `user` WHERE `username` LIKE '$username' AND `password` LIKE '$password'";
+        $data=mysqli_query($connID,$sql)->fetch_all();
         session_start();
         $_SESSION['UserID'] = $data[0][0];
         $_SESSION['Username'] = $username;

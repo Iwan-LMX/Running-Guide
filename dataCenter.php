@@ -69,7 +69,9 @@
 
         <!--列表展示数据图节点的详细数据内容-->
         <div class="item2">
-            <?php require './classStore/dataCenter/showData.php';?>
+            <?php
+            error_reporting(0);
+            require './classStore/dataCenter/showData.php';?>
         </div>
 
         <!--展示支持的运动类型和图标-->

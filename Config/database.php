@@ -6,7 +6,7 @@ error_reporting(5);
 // 声明数据库需要的信息
 $data_host = '127.0.0.1';
 $data_name = 'root';
-$data_pwd = '3459';
+$data_pwd = '1234';
 $dbname = 'runningguide';
 
 // 链接数据库

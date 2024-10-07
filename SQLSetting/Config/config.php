@@ -6,7 +6,7 @@ return array(
         'dbname'=>'data',//默认数据库
         'charset'=>'utf8',//默认字符编码集
         'user'=>'root',//默认数据库的用户
-        'pwd'=>'3459',//默认数据库的密码
+        'pwd'=>'1234',//默认数据库的密码
         'dbtype'=>'mysql',//默认数据库的类型
     ),
     'app'=>array(
